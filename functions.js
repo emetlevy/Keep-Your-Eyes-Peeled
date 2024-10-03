@@ -9,61 +9,62 @@ function preload(){
   catHeadBlink= loadImage("Blink.png");
 }
 
-function setup(){ createCanvas(3000,3000);
+function setup(){ createCanvas(650,650);
   }
     
 
  
     function draw(){
-     
+      print(mouseY);
+      
     fill("black")
     background('white');
-    if(mouseX>450 && mouseX<530 && mouseY>250 && mouseY<400){
+    if(mouseX>240 && mouseX<290 && mouseY>130 && mouseY<190){
       
-      ellipse(mouseX,mouseY,50,100);
-      ellipse(mouseX+200,mouseY,50,100);
+      ellipse(mouseX,mouseY,20,40);
+      ellipse(mouseX+100,mouseY,20,40);
+   
+    }
+    else if(mouseX<240 && mouseY>130 && mouseY<190){
+      ellipse(240,mouseY,20,40);
+  ellipse(240+100,mouseY,20,40);
   
     }
-    else if(mouseX<=450 && mouseY>250 && mouseY<400){
-      ellipse(450,mouseY,50,100);
-  ellipse(450+200,mouseY,50,100);
-  
-    }
-    else if(mouseX>=530 && mouseY>250 && mouseY<400){
-      ellipse(530,mouseY,50,100);
-  ellipse(530+200,mouseY,50,100);
+    else if(mouseX>=290 && mouseY>130 && mouseY<190){
+      ellipse(290,mouseY,20,40);
+  ellipse(290+100,mouseY,20,40);
     }
 
-    else if(mouseY<250 && mouseX>450 && mouseX<530 ){
-      ellipse(mouseX,250,50,100);
-    ellipse(mouseX+200,250,50,100);
+    else if(mouseY<130 && mouseX>240 && mouseX<290 ){
+      ellipse(mouseX,130,20,40);
+    ellipse(mouseX+100,130,20,40);
     }
    
 
-    else if(mouseY>400 && mouseX>450 && mouseX<530 ){
-      ellipse(mouseX,400,50,100);
-  ellipse(mouseX+200,400,50,100);
+    else if(mouseY>190 && mouseX>240 && mouseX<290 ){
+      ellipse(mouseX,190,20,40);
+  ellipse(mouseX+100,190,20,40);
     }
 
 //Corners 
-    else if (mouseX>530 && mouseY>400){
-      ellipse(530,400,50,100);
-      ellipse(530+200,400,50,100);
+    else if (mouseX>290 && mouseY>190){
+      ellipse(290,190,20,40);
+      ellipse(290+100,190,20,40);
     }
-    else if (mouseX>530 &&  mouseY<250){
-      ellipse(530,250,50,100);
-      ellipse(530+200,250,50,100);
+    else if (mouseX>290 &&  mouseY<130){
+      ellipse(290,130,20,40);
+      ellipse(290+100,130,20,40);
     }
-    else if (mouseX<450 &&  mouseY>400){
-      ellipse(450,400,50,100);
-      ellipse(450+200,400,50,100);
+    else if (mouseX<240 &&  mouseY>190){
+      ellipse(240,190,20,40);
+      ellipse(240+100,190,20,40);
     }
-    else if (mouseX<450 &&  mouseY<250){
-      ellipse(450,250,50,100);
-      ellipse(450+200,250,50,100);
+    else if (mouseX<240 && mouseY<130){
+      ellipse(240,130,20,40);
+      ellipse(240+100,130,20,40);
  
     }
-      image(img, 0, 0);
+      image(img, 0, 0,width, img.height*width/img.width);
   
   }
  
